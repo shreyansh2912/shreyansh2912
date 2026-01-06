@@ -59,31 +59,25 @@ def get_repos():
     return repos
 
 def get_traffic(repo_name):
-    url = f"{API_BASE}/repos/{REPO_OWNER}/{repo_name}/traffic/clones"
-    r = requests.get(url, headers=HEADERS)
-    if r.status_code != 200:
-        print(f"Error fetching traffic for {repo_name}: {r.status_code}")
-        return None
-    return r.json()
-
-def update_readme(stats_markdown):
-    with open(README_FILE, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    start_marker = "<!-- CLONES_START -->"
-    end_marker = "<!-- CLONES_END -->"
-
-    if start_marker not in content or end_marker not in content:
-        print("Error: Markers not found in README.md")
-        return
-
-    start_index = content.find(start_marker) + len(start_marker)
-    end_index = content.find(end_marker)
-
-    new_content = content[:start_index] + "\n" + stats_markdown + "\n" + content[end_index:]
+    # Fetch Clones
+    headers_clones = HEADERS.copy()
+    url_clones = f"{API_BASE}/repos/{REPO_OWNER}/{repo_name}/traffic/clones"
+    r_clones = requests.get(url_clones, headers=headers_clones)
     
-    with open(README_FILE, "w", encoding="utf-8") as f:
-        f.write(new_content)
+    # Fetch Views
+    headers_views = HEADERS.copy()
+    url_views = f"{API_BASE}/repos/{REPO_OWNER}/{repo_name}/traffic/views"
+    r_views = requests.get(url_views, headers=headers_views)
+
+    if r_clones.status_code != 200 or r_views.status_code != 200:
+        print(f"Error fetching traffic for {repo_name}: Clones:{r_clones.status_code} Views:{r_views.status_code}")
+        return None
+
+    return {
+        "clones": r_clones.json().get("clones", []),
+        "views": r_views.json().get("views", [])
+    }
+
 
 def main():
     print(f"Fetching traffic data for {REPO_OWNER}...")
@@ -91,7 +85,10 @@ def main():
     repos = get_repos()
     
     overall_clones = 0
-    overall_unique = 0
+    overall_unique_cloners = 0
+    overall_views = 0
+    overall_unique_visitors = 0
+    
     repo_stats = []
 
     for repo in repos:
@@ -102,60 +99,77 @@ def main():
         if not traffic:
             continue
             
-        # Update historical data
+        # Initialize data structure
         if name not in data:
-            data[name] = {"count": 0, "uniques": 0, "history": {}}
+            data[name] = {
+                "clones_history": {},
+                "views_history": {}
+            }
         
-        # Merge daily traffic to history to avoid losing data after 14 days
-        # We store timestamp -> {count, uniques}
-        # Note: deduplication happens by timestamp key
-        for entry in traffic.get("clones", []):
+        # Ensure older format is upgraded if needed
+        if "history" in data[name]: # Migration from old format
+             # Assume old history was clones
+             data[name]["clones_history"] = data[name]["history"]
+             del data[name]["history"]
+             if "views_history" not in data[name]:
+                 data[name]["views_history"] = {}
+
+        # Process Clones
+        for entry in traffic["clones"]:
             timestamp = entry["timestamp"]
-            data[name]["history"][timestamp] = {
+            data[name]["clones_history"][timestamp] = {
+                "count": entry["count"],
+                "uniques": entry["uniques"]
+            }
+
+        # Process Views
+        for entry in traffic["views"]:
+            timestamp = entry["timestamp"]
+            data[name]["views_history"][timestamp] = {
                 "count": entry["count"],
                 "uniques": entry["uniques"]
             }
             
-        # Recalculate totals from history (this ensures we keep accumulating)
-        # However, simply summing history might overcount if we sum 'uniques' wrongly.
-        # 'count' is safe to sum. 'uniques' is tricky because the same user cloning on different days counts as unique each day but 1 unique total.
-        # GitHub's API gives a 'count' and 'uniques' for the 14-day window.
-        # A simple accumulation strategy for 'count' is: sum of all daily counts.
-        # A simple accumulation strategy for 'uniques' is impossible to be perfect without raw logs.
-        # We will approximate 'uniques' by taking the max seen 'uniques' for the repo OR just sum daily uniques (which is an upper bound).
-        # Better approach: We trust the "total" from GitHub for the current window, and add it to a "archived" total? No, overlapping windows make that hard.
+        # Calculate Totals from History
+        total_clones = sum(d["count"] for d in data[name]["clones_history"].values())
+        unique_cloners = sum(d["uniques"] for d in data[name]["clones_history"].values())
         
-        # Strategy: We will trust our stored daily history.
-        # Total Clones = Sum of all 'count' in history.
-        # Unique Cloners = Sum of 'uniques' in history (Upper bound, assumes distinct users per day).
-        # This is the best we can do with the API limitations.
+        total_views = sum(d["count"] for d in data[name]["views_history"].values())
+        unique_visitors = sum(d["uniques"] for d in data[name]["views_history"].values())
         
-        total_clones = sum(d["count"] for d in data[name]["history"].values())
-        total_unique = sum(d["uniques"] for d in data[name]["history"].values())
-        
-        data[name]["count"] = total_clones
-        data[name]["uniques"] = total_unique
-        
-        if total_clones > 0:
-             repo_stats.append((name, total_clones, total_unique))
-             overall_clones += total_clones
-             overall_unique += total_unique
+        # Add to overall
+        overall_clones += total_clones
+        overall_unique_cloners += unique_cloners
+        overall_views += total_views
+        overall_unique_visitors += unique_visitors
+
+        # Append to list if there is any activity
+        if total_clones > 0 or total_views > 0:
+             repo_stats.append({
+                 "name": name,
+                 "clones": total_clones,
+                 "unique_cloners": unique_cloners,
+                 "views": total_views,
+                 "unique_visitors": unique_visitors
+             })
 
     save_data(data)
 
-    # Sort by clones (descending)
-    repo_stats.sort(key=lambda x: x[1], reverse=True)
+    # Sort by views (descending)
+    repo_stats.sort(key=lambda x: x["views"], reverse=True)
     
     # Generate Markdown
-    # We'll show top 5 repos and a total
+    md_lines = [
+        "| Repository | Views | Unique Visitors | Clones | Unique Cloners |", 
+        "| :--- | :---: | :---: | :---: | :---: |"
+    ]
     
-    md_lines = ["| Repository | Total Clones | Unique Cloners |", "| :--- | :---: | :---: |"]
-    md_lines.append(f"| **All Repositories** | **{overall_clones}** | **{overall_unique}** |")
+    # Total Row
+    md_lines.append(f"| **All Repositories** | **{overall_views}** | **{overall_unique_visitors}** | **{overall_clones}** | **{overall_unique_cloners}** |")
     
-    for name, clones, unique in repo_stats[:10]: # Top 10
-        # Link to the repo
-        link = f"[{name}](https://github.com/{REPO_OWNER}/{name})"
-        md_lines.append(f"| {link} | {clones} | {unique} |")
+    for repo in repo_stats[:10]: # Top 10
+        link = f"[{repo['name']}](https://github.com/{REPO_OWNER}/{repo['name']})"
+        md_lines.append(f"| {link} | {repo['views']} | {repo['unique_visitors']} | {repo['clones']} | {repo['unique_cloners']} |")
 
     update_readme("\n".join(md_lines))
     print("Done!")
