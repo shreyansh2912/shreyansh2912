@@ -15,11 +15,11 @@
 
 I build products, not just projects 🚀 Full-stack developer crafting scalable ideas with Laravel, Next.js, and JavaScript, obsessed with clean systems and real-world impact. I believe good code is business logic that actually works, ships fast, and survives Monday mornings ☕💻 Currently exploring startups, SaaS ideas, and anything that turns “what if” into “live in production” 📈✨ Debugging by day, dreaming big by night, and always one commit away from something awesome.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
+- 🔭 I’m currently working on **Full-stack SaaS products**
+- 🌱 I’m currently learning **Advanced System Design & Cloud Architecture**
+- 👯 I’m looking to collaborate on **Open Source Laravel & Next.js projects**
+- 💬 Ask me about **React, PHP, Scalability, and building from 0 to 1**
+- 📫 How to reach me: **shreyanshshah2912@gmail.com**
 
 ---
 
@@ -57,13 +57,6 @@ I build products, not just projects 🚀 Full-stack developer crafting scalable 
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=shreyansh2912&theme=tokyonight" alt="streak stats" />
 </div>
 
-## 🏆 Achievements
-
-<div align="center"> 
-  <img src="https://github-profile-trophy.vercel.app/?username=shreyansh2912&theme=flat&no-frame=true&no-bg=true&margin-w=4" />
-</div>
-
----
 
 ## 📈 Repository Insights
 
