@@ -177,8 +177,8 @@ def main():
 
     save_data(data)
 
-    # Sort by views (descending)
-    repo_stats.sort(key=lambda x: x["views"], reverse=True)
+    # Sort by clones (descending)
+    repo_stats.sort(key=lambda x: x["clones"], reverse=True)
     
     # Generate Markdown
     md_lines = [
