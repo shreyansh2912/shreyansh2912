@@ -5,7 +5,7 @@
 
 ## 🚀 About Me
 
-I'm a passionate developer interesting in building scalable web applications and exploring new technologies.
+I build products, not just projects 🚀 Full-stack developer crafting scalable ideas with Laravel, Next.js, and JavaScript, obsessed with clean systems and real-world impact. I believe good code is business logic that actually works, ships fast, and survives Monday mornings ☕💻 Currently exploring startups, SaaS ideas, and anything that turns “what if” into “live in production” 📈✨ Debugging by day, dreaming big by night, and always one commit away from something awesome.
 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
