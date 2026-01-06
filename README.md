@@ -44,7 +44,7 @@ I'm a passionate developer interesting in building scalable web applications and
 <!-- CLONES_START -->
 | Repository | Total Clones | Unique Cloners |
 | :--- | :---: | :---: |
-| **Total** | 0 | 0 |
+| **All Repositories** | **0** | **0** |
 <!-- CLONES_END -->
 
 ## 👁️ Profile Views
