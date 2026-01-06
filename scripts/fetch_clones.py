@@ -71,12 +71,34 @@ def get_traffic(repo_name):
 
     if r_clones.status_code != 200 or r_views.status_code != 200:
         print(f"Error fetching traffic for {repo_name}: Clones:{r_clones.status_code} Views:{r_views.status_code}")
+        if r_clones.status_code == 403:
+             print(f"Token Scopes: {r_clones.headers.get('X-OAuth-Scopes')}")
+             print("Make sure your token has the 'repo' scope!")
         return None
 
     return {
         "clones": r_clones.json().get("clones", []),
         "views": r_views.json().get("views", [])
     }
+
+def update_readme(stats_markdown):
+    with open(README_FILE, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    start_marker = "<!-- CLONES_START -->"
+    end_marker = "<!-- CLONES_END -->"
+
+    if start_marker not in content or end_marker not in content:
+        print("Error: Markers not found in README.md")
+        return
+
+    start_index = content.find(start_marker) + len(start_marker)
+    end_index = content.find(end_marker)
+
+    new_content = content[:start_index] + "\n" + stats_markdown + "\n" + content[end_index:]
+    
+    with open(README_FILE, "w", encoding="utf-8") as f:
+        f.write(new_content)
 
 
 def main():
