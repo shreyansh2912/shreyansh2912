@@ -54,7 +54,7 @@ I build products, not just projects 🚀 Full-stack developer crafting scalable 
 </div>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=shreyansh2912&theme=tokyonight" alt="streak stats" />
+  <img src="https://streak-stats.demolab.com/?user=shreyansh2912&theme=tokyonight" alt="streak stats" />
 </div>
 
 
