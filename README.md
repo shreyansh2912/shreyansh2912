@@ -53,9 +53,6 @@ I build products, not just projects 🚀 Full-stack developer crafting scalable 
   <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=shreyansh2912&layout=compact&theme=tokyonight" height="180" alt="languages graph"  />
 </div>
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com/?user=shreyansh2912&theme=tokyonight" alt="streak stats" />
-</div>
 
 
 ## 📈 Repository Insights
