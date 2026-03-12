@@ -60,15 +60,15 @@ I build products, not just projects 🚀 Full-stack developer crafting scalable 
 <!-- CLONES_START -->
 | Repository | Views | Unique Visitors | Clones | Unique Cloners |
 | :--- | :---: | :---: | :---: | :---: |
-| **All Repositories** | **147** | **37** | **1366** | **1192** |
-| [shreyansh2912](https://github.com/shreyansh2912/shreyansh2912) | 78 | 5 | 742 | 599 |
-| [munshi-backend](https://github.com/shreyansh2912/munshi-backend) | 2 | 2 | 49 | 45 |
-| [students-erp-backend](https://github.com/shreyansh2912/students-erp-backend) | 6 | 4 | 45 | 39 |
-| [watchup-backend](https://github.com/shreyansh2912/watchup-backend) | 4 | 1 | 43 | 38 |
-| [munshi-frontend](https://github.com/shreyansh2912/munshi-frontend) | 1 | 1 | 42 | 37 |
-| [watchup-frontend](https://github.com/shreyansh2912/watchup-frontend) | 0 | 0 | 36 | 33 |
+| **All Repositories** | **154** | **37** | **1308** | **1137** |
+| [shreyansh2912](https://github.com/shreyansh2912/shreyansh2912) | 85 | 6 | 750 | 605 |
+| [munshi-backend](https://github.com/shreyansh2912/munshi-backend) | 4 | 3 | 50 | 46 |
+| [students-erp-backend](https://github.com/shreyansh2912/students-erp-backend) | 6 | 4 | 46 | 40 |
+| [watchup-backend](https://github.com/shreyansh2912/watchup-backend) | 4 | 1 | 44 | 39 |
+| [watchup-frontend](https://github.com/shreyansh2912/watchup-frontend) | 0 | 0 | 37 | 34 |
 | [youtube-ad-wormhole](https://github.com/shreyansh2912/youtube-ad-wormhole) | 13 | 6 | 29 | 28 |
-| [flex_frontend](https://github.com/shreyansh2912/flex_frontend) | 0 | 0 | 26 | 26 |
-| [prashnly-frontend](https://github.com/shreyansh2912/prashnly-frontend) | 0 | 0 | 25 | 24 |
-| [project](https://github.com/shreyansh2912/project) | 2 | 1 | 23 | 19 |
+| [flex_frontend](https://github.com/shreyansh2912/flex_frontend) | 0 | 0 | 27 | 27 |
+| [prashnly-frontend](https://github.com/shreyansh2912/prashnly-frontend) | 0 | 0 | 26 | 25 |
+| [flex_backend](https://github.com/shreyansh2912/flex_backend) | 5 | 1 | 23 | 23 |
+| [microBiz-backend](https://github.com/shreyansh2912/microBiz-backend) | 1 | 1 | 23 | 22 |
 <!-- CLONES_END -->
