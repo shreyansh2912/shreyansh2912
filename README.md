@@ -60,8 +60,8 @@ I build products, not just projects 🚀 Full-stack developer crafting scalable 
 <!-- CLONES_START -->
 | Repository | Views | Unique Visitors | Clones | Unique Cloners |
 | :--- | :---: | :---: | :---: | :---: |
-| **All Repositories** | **166** | **46** | **2406** | **2033** |
-| [shreyansh2912](https://github.com/shreyansh2912/shreyansh2912) | 86 | 7 | 1429 | 1100 |
+| **All Repositories** | **166** | **46** | **2428** | **2048** |
+| [shreyansh2912](https://github.com/shreyansh2912/shreyansh2912) | 86 | 7 | 1450 | 1114 |
 | [munshi-frontend](https://github.com/shreyansh2912/munshi-frontend) | 1 | 1 | 72 | 58 |
 | [munshi-backend](https://github.com/shreyansh2912/munshi-backend) | 9 | 6 | 64 | 60 |
 | [students-erp-backend](https://github.com/shreyansh2912/students-erp-backend) | 6 | 4 | 58 | 52 |
@@ -69,6 +69,6 @@ I build products, not just projects 🚀 Full-stack developer crafting scalable 
 | [watchup-frontend](https://github.com/shreyansh2912/watchup-frontend) | 0 | 0 | 49 | 46 |
 | [flex_frontend](https://github.com/shreyansh2912/flex_frontend) | 0 | 0 | 45 | 45 |
 | [youtube-ad-wormhole](https://github.com/shreyansh2912/youtube-ad-wormhole) | 13 | 6 | 38 | 37 |
+| [prashnly-frontend](https://github.com/shreyansh2912/prashnly-frontend) | 1 | 1 | 37 | 36 |
 | [flex_backend](https://github.com/shreyansh2912/flex_backend) | 5 | 1 | 36 | 36 |
-| [prashnly-frontend](https://github.com/shreyansh2912/prashnly-frontend) | 1 | 1 | 36 | 35 |
 <!-- CLONES_END -->
