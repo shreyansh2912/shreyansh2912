@@ -60,15 +60,15 @@ I build products, not just projects 🚀 Full-stack developer crafting scalable 
 <!-- CLONES_START -->
 | Repository | Views | Unique Visitors | Clones | Unique Cloners |
 | :--- | :---: | :---: | :---: | :---: |
-| **All Repositories** | **168** | **47** | **3287** | **2568** |
-| [shreyansh2912](https://github.com/shreyansh2912/shreyansh2912) | 86 | 7 | 1988 | 1460 |
-| [munshi-frontend](https://github.com/shreyansh2912/munshi-frontend) | 1 | 1 | 77 | 63 |
-| [munshi-backend](https://github.com/shreyansh2912/munshi-backend) | 9 | 6 | 72 | 68 |
+| **All Repositories** | **168** | **47** | **3323** | **2599** |
+| [shreyansh2912](https://github.com/shreyansh2912/shreyansh2912) | 86 | 7 | 2004 | 1471 |
+| [munshi-frontend](https://github.com/shreyansh2912/munshi-frontend) | 1 | 1 | 78 | 64 |
+| [munshi-backend](https://github.com/shreyansh2912/munshi-backend) | 9 | 6 | 73 | 69 |
 | [php-Assignment](https://github.com/shreyansh2912/php-Assignment) | 0 | 0 | 70 | 23 |
-| [students-erp-backend](https://github.com/shreyansh2912/students-erp-backend) | 6 | 4 | 64 | 58 |
-| [watchup-backend](https://github.com/shreyansh2912/watchup-backend) | 4 | 1 | 64 | 58 |
-| [watchup-frontend](https://github.com/shreyansh2912/watchup-frontend) | 0 | 0 | 55 | 52 |
-| [flex_frontend](https://github.com/shreyansh2912/flex_frontend) | 0 | 0 | 52 | 50 |
-| [Laravel-Assessment](https://github.com/shreyansh2912/Laravel-Assessment) | 0 | 0 | 45 | 28 |
-| [youtube-ad-wormhole](https://github.com/shreyansh2912/youtube-ad-wormhole) | 13 | 6 | 45 | 44 |
+| [students-erp-backend](https://github.com/shreyansh2912/students-erp-backend) | 6 | 4 | 65 | 59 |
+| [watchup-backend](https://github.com/shreyansh2912/watchup-backend) | 4 | 1 | 65 | 59 |
+| [watchup-frontend](https://github.com/shreyansh2912/watchup-frontend) | 0 | 0 | 56 | 53 |
+| [flex_frontend](https://github.com/shreyansh2912/flex_frontend) | 0 | 0 | 53 | 51 |
+| [Laravel-Assessment](https://github.com/shreyansh2912/Laravel-Assessment) | 0 | 0 | 46 | 29 |
+| [youtube-ad-wormhole](https://github.com/shreyansh2912/youtube-ad-wormhole) | 13 | 6 | 46 | 45 |
 <!-- CLONES_END -->
