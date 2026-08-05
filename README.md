@@ -60,8 +60,8 @@ I build products, not just projects 🚀 Full-stack developer crafting scalable 
 <!-- CLONES_START -->
 | Repository | Views | Unique Visitors | Clones | Unique Cloners |
 | :--- | :---: | :---: | :---: | :---: |
-| **All Repositories** | **168** | **47** | **4347** | **3346** |
-| [shreyansh2912](https://github.com/shreyansh2912/shreyansh2912) | 86 | 7 | 2783 | 1983 |
+| **All Repositories** | **168** | **47** | **4385** | **3373** |
+| [shreyansh2912](https://github.com/shreyansh2912/shreyansh2912) | 86 | 7 | 2817 | 2006 |
 | [munshi-frontend](https://github.com/shreyansh2912/munshi-frontend) | 1 | 1 | 89 | 75 |
 | [munshi-backend](https://github.com/shreyansh2912/munshi-backend) | 9 | 6 | 81 | 77 |
 | [php-Assignment](https://github.com/shreyansh2912/php-Assignment) | 0 | 0 | 77 | 30 |
