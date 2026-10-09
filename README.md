@@ -60,15 +60,15 @@ I build products, not just projects 🚀 Full-stack developer crafting scalable 
 <!-- CLONES_START -->
 | Repository | Views | Unique Visitors | Clones | Unique Cloners |
 | :--- | :---: | :---: | :---: | :---: |
-| **All Repositories** | **178** | **51** | **5271** | **4045** |
-| [shreyansh2912](https://github.com/shreyansh2912/shreyansh2912) | 86 | 7 | 3335 | 2346 |
+| **All Repositories** | **178** | **51** | **5287** | **4058** |
+| [shreyansh2912](https://github.com/shreyansh2912/shreyansh2912) | 86 | 7 | 3343 | 2351 |
 | [Module-1-HTML](https://github.com/shreyansh2912/Module-1-HTML) | 3 | 1 | 102 | 61 |
 | [munshi-frontend](https://github.com/shreyansh2912/munshi-frontend) | 3 | 2 | 97 | 83 |
-| [munshi-backend](https://github.com/shreyansh2912/munshi-backend) | 10 | 7 | 89 | 85 |
+| [munshi-backend](https://github.com/shreyansh2912/munshi-backend) | 10 | 7 | 90 | 86 |
 | [php-Assignment](https://github.com/shreyansh2912/php-Assignment) | 0 | 0 | 88 | 41 |
-| [students-erp-backend](https://github.com/shreyansh2912/students-erp-backend) | 6 | 4 | 83 | 77 |
+| [students-erp-backend](https://github.com/shreyansh2912/students-erp-backend) | 6 | 4 | 84 | 78 |
 | [watchup-backend](https://github.com/shreyansh2912/watchup-backend) | 4 | 1 | 80 | 74 |
+| [flex_frontend](https://github.com/shreyansh2912/flex_frontend) | 0 | 0 | 77 | 70 |
 | [watchup-frontend](https://github.com/shreyansh2912/watchup-frontend) | 0 | 0 | 77 | 74 |
-| [flex_frontend](https://github.com/shreyansh2912/flex_frontend) | 0 | 0 | 76 | 69 |
 | [Laravel-Assessment](https://github.com/shreyansh2912/Laravel-Assessment) | 0 | 0 | 67 | 50 |
 <!-- CLONES_END -->
